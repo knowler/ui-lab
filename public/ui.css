@@ -2,21 +2,9 @@
   --ui-font: system-ui, -apple-system, san-serif;
 }
 
-[data-layout$="stack"] {
-  display: grid;
-  gap: var(--space, 0);
-}
-
-[data-layout="h-stack"] {
-  grid-auto-flow: column;
-}
-
-[data-layout="v-stack"] {
-  grid-auto-flow: row;
-}
-
 /* Text field */
 text-field {
+  display: block;
   font-family: var(--ui-font);
 }
 
@@ -33,4 +21,17 @@ text-field > input[type="text"] {
 text-field > input[type="text"]:focus {
   border-color: blue;
   outline: 0;
+}
+
+[data-layout$="stack"] {
+  display: grid;
+  gap: var(--space, 0);
+}
+
+[data-layout="h-stack"] {
+  grid-auto-flow: column;
+}
+
+[data-layout="v-stack"] {
+  grid-auto-flow: row;
 }
